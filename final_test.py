@@ -5,7 +5,7 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-print("⏳ Loading model and encoders...")
+print(" Loading model and encoders ")
 
 # 1. Load the pre-trained model and encoders from pickle files
 with open("churn_model.pkl", "rb") as f:
@@ -13,9 +13,9 @@ with open("churn_model.pkl", "rb") as f:
 with open("encoders.pkl", "rb") as f:
     encoders = pickle.load(f)
 
-print("✅ Model and encoders loaded successfully!\n")
+print(" Model and encoders loaded successfully!\n")
 print("=========================================")
-print("🔮 Prediction for New Customer Scenario:")
+print(" Prediction for New Customer Scenario:")
 print("=========================================\n")
 
 # 2. Dummy data for a new customer to test the model
@@ -50,10 +50,10 @@ prediction = model.predict(input_data)
 probability = model.predict_proba(input_data) * 100
 
 # 6. Display prediction results on the output console
-print(f"👤 Customer Details: Gender={new_customer['gender']}, Contract={new_customer['Contract']}, Tenure={new_customer['tenure']} Months")
-print(f"📊 Churn Probability calculated by AI: {probability[0][1]:.2f}%")
+print(f" Customer Details: Gender={new_customer['gender']}, Contract={new_customer['Contract']}, Tenure={new_customer['tenure']} Months")
+print(f" Churn Probability calculated by AI: {probability[0][1]:.2f}%")
 
 if prediction[0] == 1:
-    print("\n⚠️ Result: This customer is highly likely to leave the company! (High Churn Risk)")
+    print("\n Result: This customer is highly likely to leave the company! (High Churn Risk)")
 else:
-    print("\n✅ Result: This customer is loyal and safe. (Low Churn Risk)")
+    print("\n Result: This customer is loyal and safe. (Low Churn Risk)")

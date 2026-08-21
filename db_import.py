@@ -8,7 +8,7 @@ df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="Sneha@963"
+    password="Your_Mysql_password"
 )
 cursor = conn.cursor()
 cursor.execute("USE telecom_db")

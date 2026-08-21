@@ -17,7 +17,7 @@ print(" Fetching raw data from MySQL server ")
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="Sneha@963",
+    password="Your_Mysql_Password",
     database="telecom_db"
 )
 query = "SELECT gender, SeniorCitizen, Partner, tenure, MonthlyCharges, TotalCharges, Contract, Churn FROM churn_data"
