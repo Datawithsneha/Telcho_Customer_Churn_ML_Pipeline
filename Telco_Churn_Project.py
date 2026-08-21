@@ -12,7 +12,7 @@ from imblearn.over_sampling import SMOTE
 warnings.filterwarnings('ignore')
 
 print("==================================================")
-print("🚀 STARTING: END-TO-END TELCO CHURN ML PIPELINE")
+print(" STARTING: END-TO-END TELCO CHURN ML PIPELINE")
 print("==================================================\n")
 
 # 2. Step 1: Fetching data directly from your MySQL Database
@@ -21,7 +21,7 @@ try:
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Sneha@963",
+        password="Your_Mysql_Password",
         database="telecom_db"
     )
     query = "SELECT gender, SeniorCitizen, Partner, tenure, MonthlyCharges, TotalCharges, Contract, Churn FROM churn_data"
